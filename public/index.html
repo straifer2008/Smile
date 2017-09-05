@@ -10,9 +10,77 @@
     <link rel="stylesheet" href="css/build.min.css">
 </head>
 <body>
-
     <header class="header">
-    <div class="header-top black-bg">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left">
+                        <p class="phone">Casom care. <span>888-23-4567</span></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right">
+                        <div class="currency">
+                            <ul class="dropdown">
+                                <li id="dLabel" data-toggle="dropdown">
+                                    $ US
+                                    <span class="caret"></span>
+                                </li>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="#"><span>$ US</span></a></li>
+                                    <li><a href="#"><span>$ US</span></a></li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="account">
+                            <a href="#">
+                                <p>
+                                    <i class="fa fa-user"></i>
+                                    My account
+                                </p>
+                            </a>
+                        </div>
+                        <div class="search">
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Menu</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">New 1</a></li>
+                                    <li><a href="#">New 2</a></li>
+                                    <li><a href="#">New 3</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Primeri New</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Designers</a></li>
+                            <li><a href="#">Woman</a></li>
+                            <li><a href="#">Man</a></li>
+                            <li><a href="#">Clearence</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    <!--<div class="header-top black-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12 header-top-left left">
@@ -38,7 +106,6 @@
                                 <a href="#"><i class="fa fa-search"></i></a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -106,7 +173,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </header>
 
 <!--Slider-->
@@ -160,18 +227,18 @@
         <div class="container">
             <div class="row">
                 <div class="wraper-grid">
-                    <div class="large-col">
+                    <div class="large-col large-left">
                         <a href="#"><img src="img/bestOutfist.png" alt=""></a>
                     </div>
-                    <div class="large-col">
-                        <div class="medium-col">
+                    <div class="large-col large-right">
+                        <div class="medium-col medium-top">
                             <a href="#"><img src="img/toDial.png" alt=""></a>
                         </div>
-                        <div class="medium-col">
-                            <div class="smoll-col">
+                        <div class="medium-col medium-botom">
+                            <div class="small-col">
                                 <a href="#"><img src="img/bestsellers.png" alt=""></a>
                             </div>
-                            <div class="smoll-col">
+                            <div class="small-col">
                                 <a href="#"><img src="img/falLater.png" alt=""></a>
                             </div>
                         </div>
@@ -179,7 +246,6 @@
                 </div>
             </div>
         </div>
-
         <section class="products">
             <div class="owl-carousel owl-theme  product-carusel">
                 <div class="product-item"><img src="img/products/1.png" alt="1">
@@ -336,7 +402,7 @@
     </main>
 
 <!--footer-->
-    <footer class="footer">
+   <footer class="footer">
         <div class="footer-top">
             <div class="container">
                 <div class="row">

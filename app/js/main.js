@@ -27,4 +27,12 @@ $(document).ready(function(){
         center: true,
         loop: true
     });
+
+    $("button.navbar-toggle").onclick(
+        function () {
+            $(".collapse").addClass("in");
+            $(".navbar-toggle").removeClass("collapsed");
+            $(".collapse").css("display", "block")
+        }
+    );
 });
