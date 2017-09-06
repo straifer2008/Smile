@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "app/css/main.min.css": ["app/less/slick.less", "app/less/slick-theme.less", "app/less/main.less"]
+                    "app/css/main.css": ["app/less/main.less"]
                 }
             }
         },
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         autoprefixer:{
             dist:{
                 files:{
-                    'app/css/main.min.css':'app/css/main.min.css'
+                    'app/css/main.css':'app/css/main.css'
                 }
             }
         },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'app/css/normalize.min.css': ['node_modules/normalize.css/normalize.css']
+                    'app/css/main.min.css': ['app/css/main.css']
                 }
             }
         },
@@ -51,11 +51,11 @@ module.exports = function(grunt) {
     //Concat files
         concat: {
             basic: {
-                src : ['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/owl.carousel/dist/owl.carousel.min.js', 'app/js/add/*.min.js', 'app/js/main.min.js'],
+                src  : 'app/js/main.min.js',
                 dest : 'public/js/build.min.js',
             },
             extras: {
-                src: ['app/css/normalize.min.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css', 'app/css/font-awesome.min.css', 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css', 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css', 'app/css/add/*.min.css', 'app/css/main.min.css'],
+                src : 'app/css/main.min.css',
                 dest: 'public/css/build.min.css',
             },
         },
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['app/**/*.less', 'app/css/**/*.css', 'app/*.html', 'app/js/*.js', 'public/*.html'],
-                tasks: ['less', 'autoprefixer', 'uglify', 'concat'],
+                tasks: ['less', 'autoprefixer', 'cssmin', 'uglify', 'concat'],
                 options: {
                     nospawn: true
                 }

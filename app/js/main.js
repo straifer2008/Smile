@@ -1,3 +1,10 @@
+/*require('jquery/src/jquery.js');
+require('bootstrap/dist/js/bootstrap.js');
+require('owl.carousel/src/js/owl.carousel.js');*/
+/*include('jquery/src/jquery.js');
+include('bootstrap/dist/js/bootstrap.js');
+include('owl.carousel/src/js/owl.carousel.js');*/
+
 $(document).ready(function(){
     $('.slider-top').owlCarousel({
         items: 1,
@@ -27,12 +34,4 @@ $(document).ready(function(){
         center: true,
         loop: true
     });
-
-    $("button.navbar-toggle").onclick(
-        function () {
-            $(".collapse").addClass("in");
-            $(".navbar-toggle").removeClass("collapsed");
-            $(".collapse").css("display", "block")
-        }
-    );
 });
