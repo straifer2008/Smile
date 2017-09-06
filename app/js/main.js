@@ -1,9 +1,6 @@
-/*require('jquery/src/jquery.js');
-require('bootstrap/dist/js/bootstrap.js');
-require('owl.carousel/src/js/owl.carousel.js');*/
-/*include('jquery/src/jquery.js');
-include('bootstrap/dist/js/bootstrap.js');
-include('owl.carousel/src/js/owl.carousel.js');*/
+require('../../node_modules/jquery/src/jquery');
+require('../../node_modules/bootstrap/dist/js/bootstrap');
+require('../../node_modules/owl.carousel/src/js/owl.carousel');
 
 $(document).ready(function(){
     $('.slider-top').owlCarousel({

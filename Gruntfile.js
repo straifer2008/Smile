@@ -48,7 +48,16 @@ module.exports = function(grunt) {
             },
         },
 
-    //Concat files
+    //Brauserify
+        browserify: {
+            dist: {
+                files: {
+                    'app/js/main.min.js': ['node_modules/bootstrap/*/*.*', 'node_modules/jquery/*/*.*']
+                },
+            }
+        },
+
+        //Concat files
         concat: {
             basic: {
                 src  : 'app/js/main.min.js',
@@ -91,6 +100,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
     grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'concat', 'express', 'watch']);
