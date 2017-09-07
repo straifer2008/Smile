@@ -1,6 +1,7 @@
-@import "../../node_modules/bootstrap/less/bootstrap.less";
-@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
-@import "../../node_modules/owl.carousel/dist/assets/owl.theme.default.css";
+@import "../libs/bootstrap/less/bootstrap.less";
+@import "../libs/OwlCarousel2/dist/assets/owl.carousel.css";
+@import "../libs/OwlCarousel2/dist/assets/owl.theme.default.css";
+@import "../../node_modules/font-awesome/css/font-awesome.css";
 @import "variables.less";
 
 
@@ -9,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a,
@@ -46,6 +48,7 @@ p {
     background-color: #000;
     color: #fff;
     line-height: 30px;
+    margin-bottom: 20px;
 
     .left {
       text-align: left;
@@ -59,6 +62,10 @@ p {
       display: inline-block;
       padding: 0 15px;
       cursor: pointer;
+
+      li.dropdown-menu ul li a span {
+        color: black;
+      }
     }
 
     .account {
@@ -74,7 +81,126 @@ p {
     }
   }
 
-  .header-bottom {}
+  .header-bottom {
+    .logotype {
+      position: relative;
+      a {
+        img.logo {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    nav.navbar {
+      background-color: #fff;
+      font-size: 16px;
+      text-transform: lowercase;
+      border: none;
+      border-radius: 0;
+
+      .navbar-header {
+        button.navbar-toggle {
+          border: none;
+          width: 40px;
+          span.icon-bar {
+            background-color: #fff;
+            height: 5px;
+            border-radius: 30px;
+          }
+        }
+      }
+      .navbar-collapse {
+        ul.navbar-nav {
+          li {
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    .items {
+      z-index: 3;
+
+      .items-top {
+        border: 1px solid #d6d6d6;
+        position: relative;
+        .dropdown {
+          border: none;
+          box-shadow: none;
+          p {
+            color: #949393;
+            width: 100%;
+            text-align: left;
+            text-transform: none;
+            font-size: 12px;
+            line-height: 30px;
+            margin-left: 10px;
+            &:hover {
+              background: none;
+              cursor: pointer;
+            }
+            span {
+              position: absolute;
+              top: 50%;
+              right: 10px;
+            }
+          }
+
+          ul.dropdown-menu {
+            width: 100%;
+          }
+        }
+      }
+      .items-bottom {
+        border: 1px solid #d6d6d6;
+        background-color: #fafafa;
+        position: relative;
+        .item-bag {
+          display: inline-block;
+          text-align: left;
+          line-height: 30px;
+          margin-left: 10px;
+          color: #b3b3b3;
+        }
+        .item-counter {
+          color: #949393;
+          display: inline-block;
+          text-align: right;
+          line-height: 30px;
+          float: right;
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+}
+
+section.slider {
+  margin: 20px 0;
+  #sliderTop {
+    .owl-carousel {
+      .owl-nav {
+        .owl-prev {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-75%);
+          line-height: 100px;
+        }
+        .owl-next {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-75%);
+          line-height: 100px;
+        }
+      }
+    }
+  }
 }
 
 section.sign {
@@ -356,7 +482,7 @@ main {
             display: inline-block;
             width: 36px;
             height: 22px;
-            background-image: url(../img/carts.png);
+            background-image: url("../img/carts.png");
             &.visa {
               background-position: 0 0;
             }
@@ -496,5 +622,11 @@ footer.footer {
       text-align: right;
       margin: 30px 0;
     }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 640px) {
+  .navbar-header {
+    background-color: @btn-color;
   }
 }

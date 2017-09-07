@@ -1,11 +1,11 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     'use strict';
 
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-    //Compiles LESS files
+        //Compiles LESS files
         less: {
             development: {
                 options: {
@@ -18,15 +18,15 @@ module.exports = function(grunt) {
                 }
             }
         },
-    //Autoprefixer
-        autoprefixer:{
-            dist:{
-                files:{
-                    'app/css/main.css':'app/css/main.css'
+        //Autoprefixer
+        autoprefixer: {
+            dist: {
+                files: {
+                    'app/css/main.css': 'app/css/main.css'
                 }
             }
         },
-    //CSSMinificator
+        //CSSMinificator
         cssmin: {
             options: {
                 mergeIntoShorthands: false,
@@ -34,42 +34,29 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'app/css/main.min.css': ['app/css/main.css']
+                    'public/css/build.min.css': ['app/css/main.css']
                 }
             }
         },
 
-    //Uglify files
+        //Uglify files
         uglify: {
             my_target: {
                 files: {
-                    'app/js/main.min.js': ['app/js/main.js', 'app/js/add/*.js']
-                },
-            },
-        },
-
-    //Brauserify
-        browserify: {
-            dist: {
-                files: {
-                    'app/js/main.min.js': ['node_modules/bootstrap/*/*.*', 'node_modules/jquery/*/*.*']
-                },
+                    'public/js/build.min.js': ['app/libs/jquery/jquery.min.js', 'app/libs/bootstrap/dist/js/bootstrap.js', 'app/libs/OwlCarousel2/dist/owl.carousel.js','app/js/main.js']
+                }
             }
         },
 
-        //Concat files
-        concat: {
-            basic: {
-                src  : 'app/js/main.min.js',
-                dest : 'public/js/build.min.js',
-            },
-            extras: {
-                src : 'app/css/main.min.css',
-                dest: 'public/css/build.min.css',
-            },
-        },
+       /* //Brauserify
+        browserify: {
+            main: {
+                src: 'app/js/main.min.js',
+                dest: 'public/js/build.min.js'
+            }
+        },*/
 
-    // AutoReload pages
+        // AutoReload pages
         express: {
             all: {
                 options: {
@@ -80,11 +67,11 @@ module.exports = function(grunt) {
             }
         },
 
-    //Watching the files in my project
+        //Watching the files in my project
         watch: {
             styles: {
                 files: ['app/**/*.less', 'app/css/**/*.css', 'app/*.html', 'app/js/*.js', 'public/*.html'],
-                tasks: ['less', 'autoprefixer', 'cssmin', 'uglify', 'concat'],
+                tasks: ['less', 'autoprefixer', 'cssmin', /*'uglify'*/],
                 options: {
                     nospawn: true
                 }
@@ -97,12 +84,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'concat', 'express', 'watch']);
-    grunt.registerTask('test', 'cssmin');
+    grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'express', 'watch']);
 };

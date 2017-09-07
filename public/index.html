@@ -24,10 +24,12 @@
                                     $ US
                                     <span class="caret"></span>
                                 </li>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#"><span>$ US</span></a></li>
-                                    <li><a href="#"><span>$ US</span></a></li>
-                                </ul>
+                                <li class="dropdown-menu" aria-labelledby="dLabel">
+                                    <ul>
+                                        <li><a href="#"><span>$ US</span></a></li>
+                                        <li><a href="#"><span>$ US</span></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <div class="account">
@@ -46,156 +48,82 @@
             </div>
         </div>
         <div class="header-bottom">
-            <nav class="navbar navbar-default">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Menu</a>
-                    </div>
+            <div class="container">
+                <div class="logotype col-xs-12 col-sm-4 col-md-2 col-lg-2">
+                    <a href="#">
+                        <img src="img/logo.png" alt="logo" class="logo">
+                    </a>
+                </div>
+                <div class="items col-xs-12 col-sm-6 col-md-3 col-lg-3 pull-right">
+                    <div class="items-top">
 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">New 1</a></li>
-                                    <li><a href="#">New 2</a></li>
-                                    <li><a href="#">New 3</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Primeri New</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Designers</a></li>
-                            <li><a href="#">Woman</a></li>
-                            <li><a href="#">Man</a></li>
-                            <li><a href="#">Clearence</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-    <!--<div class="header-top black-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12 header-top-left left">
-                    <p class="phone">Casom care. <span>888-23-4567</span></p>
-                </div>
-                <div class="col-lg-6 col-md-6  col-xs-12 header-top-right">
-                    <div class="right">
-                        <ul class="account">
-                            <li class="dropdown currency add-right-border">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#036; us<span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">&#8372; ua</a></li>
-                                    <li><a href="#">&#128; eur</a></li>
-                                </ul>
-                            </li>
-                            <li class="my-account add-right-border">
-                                <a href="#">
-                                    <i class="fa fa-user" aria-hidden="true"></i>my account
-                                </a>
-                            </li>
-                            <li class="search add-right-border">
-                                <a href="#"><i class="fa fa-search"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container header-bottom">
-        <div class="row">
-            <div class="col-lg-2 col-sm-6 col-xs-12">
-                <div class="logotype">
-                    <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-lg-push-6 col-sm-6 col-xs-12">
-                <div class="carts">
-                    <div class="user-cart">
-                        <div class="dropdown cart-dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Your cart <i class="fa fa-caret-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a href="#">cart 1</a></li>
-                                <li><a href="#">cart 2</a></li>
+                        <div class="dropdown">
+                            <p class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Your cart
+                                <span class="caret"></span>
+                            </p>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Your cart 2</a></li>
+                                <li><a href="#">Your cart 3</a></li>
                             </ul>
                         </div>
-                        <div class="items">
-                            <i class="fa fa-shopping-bag"></i>
-                            <div class="items-block">
-                                <span class="items-in">0</span> Items | &#036; <span class="cost">0</span>
-                            </div>
+
+                    </div>
+                    <div class="items-bottom">
+                        <div class="item-bag">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </div>
+                        <div class="item-counter">
+                            <p><span>0 </span> ITEMS | $ <span>0</span></p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-lg-pull-3 col-sm-12 col-xs-12">
-                <div class="menu">
+                <div class="navigation col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <nav class="navbar navbar-default">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#navbar-main">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <span class="navbar-text hidden-lg">Menu</span>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbar-main">
-                            <ul class="navbar-nav nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">new <span
-                                            class="caret"></span></a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-                                        <li><a class="dropdown-item" href="#">New 1</a></li>
-                                        <li><a class="dropdown-item" href="#">New 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">designers</a></li>
-                                <li><a href="#">women</a></li>
-                                <li><a href="#">men</a></li>
-                                <li><a href="#">clearence</a></li>
-                            </ul>
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">New 1</a></li>
+                                            <li><a href="#">New 2</a></li>
+                                            <li><a href="#">New 3</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Primeri New</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Designers</a></li>
+                                    <li><a href="#">Woman</a></li>
+                                    <li><a href="#">Man</a></li>
+                                    <li><a href="#">Clearence</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-    </div>-->
 </header>
 
 <!--Slider-->
-    <section class="carusel">
-        <div class="owl-carousel owl-theme slider-top">
-            <div class="carusel-items">
-                <img src="img/carusel/1.png" alt="1">
-            </div>
-            <div class="carusel-items">
-                <img src="img/carusel/1.png" alt="2">
-            </div>
-            <div class="carusel-items">
-                <img src="img/carusel/1.png" alt="3">
-            </div>
-            <div class="carusel-items">
-                <img src="img/carusel/1.png" alt="4">
-            </div>
-            <div class="carusel-items">
-                <img src="img/carusel/1.png" alt="5">
-            </div>
+    <section class="slider">
+        <div class="owl-carousel owl-theme" id="sliderTop">
+            <div><img src="img/carusel/1.png" alt="sliger image 1"></div>
+            <div><img src="img/carusel/1.png" alt="sliger image 2"></div>
+            <div><img src="img/carusel/1.png" alt="sliger image 3"></div>
+            <div><img src="img/carusel/1.png" alt="sliger image 4"></div>
+            <div><img src="img/carusel/1.png" alt="sliger image 5"></div>
         </div>
-        <div class="time-line"></div>
     </section>
 
 <!--sign in block-->
@@ -212,7 +140,7 @@
                     <div class="col-lg-6 col-md-6 col-xs-12">
                         <div class="social">
                             <ul class="find-us">
-                                <span>Find us</span>
+                                <li><span>Find us</span></li>
                                 <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
                                 <li><a href="#"><i class="fa fa-pinterest fa-2x"></i></a></li>
@@ -246,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <section class="products">
+        <!--<section class="products">
             <div class="owl-carousel owl-theme  product-carusel">
                 <div class="product-item"><img src="img/products/1.png" alt="1">
                     <div class="product-content">
@@ -298,7 +226,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <section class="clearence">
             <div class="container relative">
@@ -490,7 +418,7 @@
         </div>
     </footer>
 
-<!--one compile script with Jquery, bootstrap & main.js-->
+<!--scripts -->
     <script src="js/build.min.js"></script>
 </body>
 </html>
