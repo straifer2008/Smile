@@ -4,8 +4,6 @@
 @import "../../node_modules/font-awesome/css/font-awesome.css";
 @import "variables.less";
 
-
-
 body {
   margin: 0;
   padding: 0;
@@ -38,7 +36,7 @@ p {
   position: relative;
 }
 
-.header  {
+.header {
   font-size: 12px;
   text-transform: uppercase;
   font-family: Arial, serif;
@@ -55,7 +53,7 @@ p {
     }
 
     .right {
-      text-align: right;
+      text-align: end;
     }
 
     .currency {
@@ -114,7 +112,11 @@ p {
         ul.navbar-nav {
           li {
             a {
-              color: #000;
+              color: #2b2b2b;
+
+              &:hover {
+                color: #000;
+              }
             }
           }
         }
@@ -182,22 +184,80 @@ p {
 section.slider {
   margin: 20px 0;
   #sliderTop {
-    .owl-carousel {
-      .owl-nav {
-        .owl-prev {
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-75%);
-          line-height: 100px;
+    .slider-blok {
+      position: relative;
+
+      button.shop-now {
+        position: absolute;
+        top: 70%;
+        left: 22%;
+        border: none;
+        border-bottom: 3px solid @btn-bottom;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: 100;
+        padding: 0 20px;
+        background-color: @btn-color;
+        color: #fff;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        box-shadow: none;
+        transition: .2s;
+
+        span.caret {
+          transform: rotate(-90deg);
+          margin-left: 15px;
         }
-        .owl-next {
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-75%);
-          line-height: 100px;
+
+        &:hover {
+          box-shadow: 0 5px 10px rgba(0,0,0,.5);
+          border-bottom: 5px solid @btn-bottom;
         }
+      }
+    }
+
+    .owl-dots {
+      .owl-dot {
+        span {
+          background-color: #867a76;
+
+          &:hover {
+            background-color: @btn-color;
+          }
+        }
+      }
+      .active {
+        span {
+          background-color: @btn-color;
+        }
+      }
+    }
+
+    .owl-nav {
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+        line-height: 100px;
+        background-color: #fefefd;
+        color: #cbcbca;
+        font-size: 20px;
+        transition: .2s;
+        border-radius: 0;
+
+        &:hover {
+          background-color: #fefefd;
+          box-shadow: 0 0 1px rgba(0,0,0,0.8);
+          color: #000;
+        }
+      }
+
+      .owl-prev {
+        left: 0;
+      }
+
+      .owl-next {
+        right: 0;
       }
     }
   }
@@ -217,10 +277,12 @@ section.sign {
 
         input.mail {
           line-height: 30px;
-          text-align: center;
+          text-align: left;
+          padding-left: 10px;
           font-size: 12px;
           font-style: italic;
           border: none;
+          outline: none;
         }
 
         input.submit {
@@ -253,7 +315,8 @@ section.sign {
               i {
                 line-height: 54px;
                 width: 54px;
-                text-align: center;  }
+                text-align: center;
+              }
             }
 
             &:nth-child(2n) {
@@ -354,12 +417,13 @@ main {
           }
         }
         .product-content {
-          p {}
+          p {
+          }
           button {
             height: 33px;
             border: none;
             background-color: @btn-color;
-            border-bottom: 4px solid  @btn-bottom;
+            border-bottom: 4px solid @btn-bottom;
             text-transform: uppercase;
             color: #fff;
             font-weight: 600;
@@ -434,7 +498,8 @@ main {
           justify-content: space-around;
           li {
             a {
-              img {}
+              img {
+              }
             }
           }
         }
@@ -573,7 +638,7 @@ footer.footer {
           height: 100%;
           width: 100%;
           i {
-            font-size:  18px;
+            font-size: 18px;
             top: 24%;
             left: 24%;
             position: absolute;
@@ -628,5 +693,174 @@ footer.footer {
 @media (max-width: 992px) and (min-width: 640px) {
   .navbar-header {
     background-color: @btn-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    .header-top {
+      font-size: 2.3em;
+      text-align: center;
+      .right {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+
+        .currency {
+          line-height: 80px;
+          padding: 0;
+        }
+
+        .account {
+          line-height: 80px;
+          padding: 0 50px;
+
+          i {
+            padding: 0 10px;
+            color: #666666;
+            font-size: 30px;
+          }
+        }
+
+        .search {
+          line-height: 80px;
+          padding: 0 30px 0 0 ;
+        }
+      }
+
+      .left {
+        padding: 25px 0;
+        background-color: #fafafa;
+        color: #838383;
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .header-bottom {
+      .logotype {
+        text-align: center;
+        margin: 30px auto;
+        a {
+          img.logo {
+            width: 80vw;
+            height: 100px;
+          }
+        }
+      }
+
+      .items {
+        .items-top {
+          display: none;
+        }
+
+        .items-bottom {
+          line-height: 70px;
+
+          .item-bag {
+            line-height: 70px;
+          }
+
+          .item-counter {
+            line-height: 70px;
+          }
+        }
+      }
+    }
+
+  }
+
+  section.slider {
+    display: none;
+  }
+
+  .navbar-header {
+    background-color: @btn-color;
+    margin: 24px 0;
+  }
+
+  .sign {
+    .row {
+      div:nth-child(1) {
+        text-align: center;
+
+        label {
+          display: none;
+        }
+
+        input.email {
+          width: 80vw;
+        }
+
+        input.submit {
+          width: 20%;
+        }
+      }
+      div:nth-child(2) {
+        text-align: center;
+      }
+    }
+  }
+
+  main {
+    .grid {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    .header-top {
+      .right {
+        font-size: 14px;
+        .currency {
+          line-height: 40px;
+          padding: 0;
+
+          .dropdown {
+            padding: 0 10px;
+          }
+        }
+
+        .account {
+          line-height: 40px;
+          padding: 0 5%;
+          white-space: nowrap;
+
+          i {
+            font-size: 16px;
+          }
+        }
+
+        .search {
+          line-height: 40px;
+          padding: 0;
+        }
+      }
+
+      .left {
+        padding: 10px 0;
+        font-size: 16px;
+      }
+    }
+
+    .header-bottom {
+      .items {
+        .items-bottom {
+          line-height: 50px;
+
+          .item-bag {
+            line-height: 50px;
+          }
+
+          .item-counter {
+            line-height: 50px;
+          }
+        }
+      }
+    }
   }
 }
