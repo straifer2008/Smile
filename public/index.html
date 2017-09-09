@@ -200,58 +200,96 @@
     <div class="container">
         <div class="tabs">
             <ul class="nav nav-tabs products-tabs">
-                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-                <li><a href="#some" data-toggle="tab">massages</a></li>
+                <li class="active"><a href="#home" data-toggle="tab">what’s hot?</a></li>
+                <li><a href="#some" data-toggle="tab">designers</a></li>
+                <li><a href="#home" data-toggle="tab">featured</a></li>
+                <li><a href="#some" data-toggle="tab">latest</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="home">
                     <div class="products-container owl-carousel owl-theme" id="slider-products">
                         <div class="products-item">
-                            <img src="img/products/1.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/1.png" alt="">
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                         <div class="products-item">
-                            <img src="img/products/2.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/2.png" alt="products2">
+                                <div class="sale-block">
+                                    <img src="img/sale.png" alt="sale">
+                                </div>
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                         <div class="products-item">
-                            <img src="img/products/3.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/3.png" alt="">
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                         <div class="products-item">
-                            <img src="img/products/4.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/4.png" alt="">
+                                <div class="sale-block">
+                                    <img src="img/sale.png" alt="sale">
+                                </div>
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                         <div class="products-item">
-                            <img src="img/products/3.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/3.png" alt="">
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                         <div class="products-item">
-                            <img src="img/products/2.png" alt="">
+                            <div class="product-imgages">
+                                <img src="img/products/2.png" alt="">
+                                <div class="shop-it-block">
+                                    <img src="img/shop_it.png" alt="shop_it">
+                                </div>
+                            </div>
                             <div class="item-content">
-                                <h3>Nadya Dress</h3>
-                                <p class="prise">1.67</p>
-                                <button>Add to cart +</button>
+                                <a href="#"><h3>Nadya Dress</h3></a>
+                                <p class="prise">$1.67</p>
+                                <button>Add to cart<span>+</span></button>
                             </div>
                         </div>
                     </div>
@@ -268,46 +306,79 @@
     </div>
 
     <section class="clearence">
-        <div class="container relative">
+        <div class="container">
             <div class="clearence-line">
                 <img src="img/clearence.png" alt="clearence">
                 <div class="line"></div>
             </div>
-            <div class="clearence-product">
-                <div class="col-lg-3">
-                    <div class="clearence-product-item"><img src="img/products/2.png" alt="1">
-                        <div class="product-content">
-                            <p>Nadia dress</p>
-                            <p>65.45</p>
-                            <button>add to card<span><i class="fa fa-plus"></i></span></button>
+            <div class="clearence-products owl-carousel owl-theme" id="slider-clearence">
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/1.png" alt=""></a>
+                        <div class="sale-block">
+                            <img src="img/sale.png" alt="sale">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="clearence-product-item"><img src="img/products/2.png" alt="2">
-                        <div class="product-content">
-                            <p>Nadia dress</p>
-                            <p>65.45</p>
-                            <button>add to card<span><i class="fa fa-plus"></i></span></button>
-                        </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="clearence-product-item"><img src="img/products/2.png" alt="3">
-                        <div class="product-content">
-                            <p>Nadia dress</p>
-                            <p>65.45</p>
-                            <button>add to card<span><i class="fa fa-plus"></i></span></button>
-                        </div>
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/2.png" alt=""></a>
+                    </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="clearence-product-item"><img src="img/products/2.png" alt="4">
-                        <div class="product-content">
-                            <p>Nadia dress</p>
-                            <p>65.45</p>
-                            <button>add to card<span><i class="fa fa-plus"></i></span></button>
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/3.png" alt=""></a>
+                        <div class="sale-block">
+                            <img src="img/sale.png" alt="sale">
                         </div>
+                    </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
+                    </div>
+                </div>
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/1.png" alt=""></a>
+                    </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
+                    </div>
+                </div>
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/4.png" alt=""></a>
+                        <div class="sale-block">
+                            <img src="img/sale.png" alt="sale">
+                        </div>
+                    </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
+                    </div>
+                </div>
+                <div class="clearence-item">
+                    <div class="clearence-imgages">
+                        <a href="#"><img src="img/products/2.png" alt=""></a>
+                    </div>
+                    <div class="clearence-item-content">
+                        <a href="#"><h3>SOFI BLOUSE</h3></a>
+                        <p class="prise">$1.67</p>
+                        <button>Add to cart<span>+</span></button>
                     </div>
                 </div>
             </div>
@@ -322,7 +393,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <ul class="brands-content">
+                <ul class="brands-content owl-carousel owl-theme" id="slider-brands">
                     <li><a href="#"><img src="img/brands/addict.png" alt="1"></a></li>
                     <li><a href="#"><img src="img/brands/abandon.png" alt="2"></a></li>
                     <li><a href="#"><img src="img/brands/addidas.png" alt="3"></a></li>

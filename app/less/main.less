@@ -389,16 +389,28 @@ main {
   }
 
   .tabs {
+    position: relative;
+
     .products-tabs {
       li {
         a {
           border: none;
           border-radius: 0;
-          background-color: @btn-color;
+          background-color: #fff;
           outline: none;
-          &:hover {
+          color: #555555;
+          text-transform: uppercase;
+          font-weight: 500;
 
+          &:active, :focus {
+            background-color: @btn-color;
+            color: #fff;
           }
+        }
+
+        &:active, :focus {
+          background-color: @btn-color;
+          color: #fff;
         }
       }
     }
@@ -406,23 +418,137 @@ main {
     .tab-content {
       background-color: @btn-color;
       .products-container {
-        .products-item {
-          position: relative;
-          height: 400px;
-          img {
-            width: 80%;
-            height: 60%;
-            text-align: center;
+        .owl-nav {
+          position: absolute;
+          top: -50px;
+          right: 0;
+
+          div {
+            border: none;
+            border-radius: 0;
+            font-size: 24px;
+            line-height: 40px;
+            padding: 0 15px;
+            margin: 0;
+
+            &:hover, :active, :focus {
+              background-color: @btn-color;
+              color: #fff;
+            }
           }
+
+          .owl-prev {
+            background-color: #f2f2f2;
+            color: #979797;
+          }
+
+          .owl-next {
+            background-color: #f2f2f2;
+            color: #979797;
+          }
+        }
+
+        .products-item {
+          background-color: #f7f7f7;
+          margin: 25px 0;
+          transition: .3s;
+
+          .product-imgages {
+            height: 320px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              transition: .3s;
+            }
+
+            .sale-block {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 50px;
+              width: 50px;
+              img{
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            .shop-it-block {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              height: 120px;
+              width: 120px;
+              img {
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: .3s;
+              }
+            }
+          }
+
           .item-content {
             text-align: center;
-            h3 {}
-            .prise {}
+            a {
+              h3 {
+                text-transform: uppercase;
+                color: #373737;
+                font-size: 14px;
+                transition: .3s;
+
+                &:hover {
+                  color: #000;
+                  font-weight: 500;
+                }
+              }
+            }
+            .prise {
+              margin: 5px 0;
+              font-size: 20px;
+              font-weight: 600;
+              color: #373737;
+            }
             button {
               margin: 0 auto;
               background-color: @btn-color;
               border: none;
               border-bottom: 3px solid @btn-bottom;
+              margin-bottom: 12px;
+              color: #fff;
+              text-transform: uppercase;
+              padding: 4px;
+              span {
+                font-weight: 600;
+                margin-left: 4px;
+              }
+
+              &:hover {
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+              }
+            }
+          }
+
+          &:hover {
+            transform: scale(1.015);
+
+            .product-imgages {
+              img {
+                 transform: scale(1.2);
+                 cursor: pointer;
+               }
+
+              .shop-it-block {
+                img {
+                  opacity: .8;
+                  transform: translate(-50%, -50%);
+                  cursor: pointer;
+                }
+              }
             }
           }
         }
@@ -444,6 +570,7 @@ main {
         z-index: -1;
         position: absolute;
         top: 50%;
+        height: 2px;
       }
 
       img {
@@ -454,6 +581,83 @@ main {
         background-color: #fff;
       }
     }
+
+    .clearence-products {
+      margin-bottom: 15px;
+      .clearence-item {
+        background-color: #f7f7f7;
+        transition: .3s;
+        .clearence-imgages {
+          height: 320px;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            transition: .3s;
+
+            &:hover {
+              transform: scale(1.15);
+            }
+          }
+
+          .sale-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50px;
+            width: 50px;
+            img{
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        .clearence-item-content {
+          text-align: center;
+          a {
+            h3 {
+              text-transform: uppercase;
+              color: #373737;
+              font-size: 14px;
+              transition: .3s;
+
+              &:hover {
+                color: #000;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .prise {
+            margin: 5px 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #373737;
+          }
+
+          button {
+            margin: 0 auto;
+            background-color: @btn-color;
+            border: none;
+            border-bottom: 3px solid @btn-bottom;
+            margin-bottom: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 4px;
+            span {
+              font-weight: 600;
+              margin-left: 4px;
+            }
+
+            &:hover {
+              box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+            }
+          }
+        }
+      }
+    }
   }
 
   .brands {
@@ -462,7 +666,7 @@ main {
       display: flex;
       justify-content: space-between;
       white-space: nowrap;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       .brand-line {
         border-top: 1px solid #ebebeb;
         width: 100%;
@@ -484,10 +688,16 @@ main {
       .row {
         ul.brands-content {
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
+          height: 70px;
           li {
+            position: relative;
             a {
+              height: 100%;
+              width: 100%;
               img {
+                height: 100%;
+                width: 100%;
               }
             }
           }
