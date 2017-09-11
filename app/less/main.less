@@ -4,6 +4,11 @@
 @import "../../node_modules/font-awesome/css/font-awesome.css";
 @import "variables.less";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -391,7 +396,11 @@ main {
   .tabs {
     position: relative;
 
-    .products-tabs {
+    #touch-menu {
+      display: none;
+    }
+
+    ul.products-tabs {
       li {
         a {
           border: none;
@@ -1010,7 +1019,7 @@ footer.footer {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   header {
     .header-top {
       .right {
@@ -1057,6 +1066,92 @@ footer.footer {
 
           .item-counter {
             line-height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .tabs {
+      #touch-menu {
+        display: block;
+        color: #fff;
+        background-color: #f4845d;
+        text-transform: uppercase;
+        line-height: 50px;
+        width: 100%;
+        position: relative;
+        padding: 0 15px;
+        span {}
+        .fa-caret-down {
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      ul.products-tabs {
+        display: none;
+
+        li {
+          display: block;
+          width: 100%;
+
+          a {
+            color: #fff;
+            background-color: #fd926d;
+          }
+        }
+      }
+
+      .tab-content {
+        width: 95%;
+        margin: 0 auto;
+        .products-container {
+          width: 90%;
+          margin: 0 auto;
+
+          .products-item {
+
+            .product-imgages {
+              height: 250px;
+
+              .sale-block {
+                height: 40px;
+                width: 40px;
+              }
+
+              .shop-it-block {
+                height: 80px;
+                width: 80px;
+              }
+            }
+
+            .item-content {
+              text-align: center;
+              a {
+                h3 {
+                  font-size: 20px;
+                  margin-bottom: 5px;
+                }
+              }
+              .prise {
+                margin: 0;
+                font-size: 24px;
+              }
+              button {
+                padding: 10px 25px;
+                font-size: 1em;
+
+                span {
+                  margin: 0 0 0 10px;
+                  font-weight: 900;
+                  font-size: 20px;
+                }
+              }
+            }
           }
         }
       }
